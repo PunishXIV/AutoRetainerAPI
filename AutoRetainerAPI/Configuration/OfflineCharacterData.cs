@@ -51,6 +51,7 @@ public class OfflineCharacterData
     public TeleportOptionsOverride TeleportOptionsOverride = new();
     public bool NoGilTrack = false;
     public Guid ExchangePlan = Guid.Empty;
+    public Guid InventoryCleanupPlan = Guid.Empty;
 
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;
