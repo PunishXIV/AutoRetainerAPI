@@ -15,13 +15,14 @@
         <AssemblyVersion>1.0.0.2</AssemblyVersion>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\ECommons\ECommons\ECommons.csproj" />
-    </ItemGroup>
     <PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">
         <DalamudLibPath>$(DALAMUD_HOME)/</DalamudLibPath>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="ECommons" Version="3.0.1.3" />
+    </ItemGroup>
     <ItemGroup>
         <Reference Include="Newtonsoft.Json">
             <HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
