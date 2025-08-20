@@ -29,6 +29,8 @@ public class OfflineCharacterData
     public HashSet<uint> UnlockedGatheringItems = new();
     public short[] ClassJobLevelArray = new short[30];
     public uint Gil = 0;
+    public uint GCSeals = 0;
+    public uint GCRank = 0;
     public List<OfflineVesselData> OfflineAirshipData = new();
     public List<OfflineVesselData> OfflineSubmarineData = new();
     public HashSet<string> EnabledAirships = new();
