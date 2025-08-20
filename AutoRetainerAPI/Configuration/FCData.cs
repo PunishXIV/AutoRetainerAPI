@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Reflection;
 
 namespace AutoRetainerAPI.Configuration;
 [Serializable]
+[Obfuscation(Exclude = true, ApplyToMembers = true)]
 public class FCData
 {
     public ulong ID;

@@ -1,9 +1,11 @@
 ﻿using ECommons.Logging;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace AutoRetainerAPI.Configuration;
 [Serializable]
+[Obfuscation(Exclude = true, ApplyToMembers = true)]
 public class HalfHourSchedule
 {
     public Dictionary<int, IntervalState> Intervals = [];

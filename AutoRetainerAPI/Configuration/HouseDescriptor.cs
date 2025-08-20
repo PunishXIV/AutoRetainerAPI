@@ -1,10 +1,12 @@
 ﻿using ECommons.ExcelServices;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace AutoRetainerAPI.Configuration;
 
 [Serializable]
+[Obfuscation(Exclude = true, ApplyToMembers = true)]
 public class HouseDescriptor : IEquatable<HouseDescriptor>
 {
     public uint TerritoryType;
