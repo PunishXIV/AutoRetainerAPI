@@ -17,12 +17,12 @@ public class HouseDescriptor : IEquatable<HouseDescriptor>
 
     public HouseDescriptor(uint territoryType, int ward, int plot, bool Unchecked = false) : this()
     {
-        if (!Unchecked)
+        if(!Unchecked)
         {
-            if (ward < 0) throw new ArgumentOutOfRangeException(nameof(ward));
-            if (plot < 0) throw new ArgumentOutOfRangeException(nameof(plot));
+            if(ward < 0) throw new ArgumentOutOfRangeException(nameof(ward));
+            if(plot < 0) throw new ArgumentOutOfRangeException(nameof(plot));
         }
-        if (territoryType < 1) throw new ArgumentOutOfRangeException(nameof(territoryType));
+        if(territoryType < 1) throw new ArgumentOutOfRangeException(nameof(territoryType));
         TerritoryType = territoryType;
         Ward = ward;
         Plot = plot;
@@ -48,7 +48,7 @@ public class HouseDescriptor : IEquatable<HouseDescriptor>
 
     public override string ToString()
     {
-        return $"[{ExcelTerritoryHelper.GetName(this.TerritoryType, true)} @ ward={this.Ward}, plot={this.Plot}]";
+        return $"[{ExcelTerritoryHelper.GetName(TerritoryType, true)} @ ward={Ward}, plot={Plot}]";
     }
 
     public static bool operator ==(HouseDescriptor left, HouseDescriptor right)

@@ -1,10 +1,9 @@
 ﻿using System.Reflection;
 
-namespace AutoRetainerAPI.Configuration
+namespace AutoRetainerAPI.Configuration;
+
+[Obfuscation(Exclude = true, ApplyToMembers = true)]
+public enum MultiModeType
 {
-    [Obfuscation(Exclude = true, ApplyToMembers = true)]
-    public enum MultiModeType
-    {
-        Retainers, Submersibles, Everything
-    }
+    Retainers, Submersibles, Everything
 }

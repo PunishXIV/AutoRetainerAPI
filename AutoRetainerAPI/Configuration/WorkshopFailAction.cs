@@ -1,10 +1,9 @@
 ﻿using System.Reflection;
 
-namespace AutoRetainerAPI.Configuration
+namespace AutoRetainerAPI.Configuration;
+
+[Obfuscation(Exclude = true, ApplyToMembers = true)]
+public enum WorkshopFailAction
 {
-    [Obfuscation(Exclude = true, ApplyToMembers = true)]
-    public enum WorkshopFailAction
-    {
-        ExcludeChar,ExcludeVessel,StopPlugin
-    }
+    ExcludeChar, ExcludeVessel, StopPlugin
 }

@@ -1,7 +1,6 @@
-﻿namespace AutoRetainerAPI.Configuration
+﻿namespace AutoRetainerAPI.Configuration;
+
+public enum HouseTeleportTarget
 {
-    public enum HouseTeleportTarget
-    {
-        Private_Estate_Hall, Free_Company_Estate_Hall, Apartment
-    }
+    Private_Estate_Hall, Free_Company_Estate_Hall, Apartment
 }

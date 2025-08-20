@@ -1,6 +1,6 @@
-﻿using System;
+﻿using ECommons.Logging;
+using System;
 using System.Collections.Generic;
-using ECommons.Logging;
 
 namespace AutoRetainerAPI.Configuration;
 [Serializable]
@@ -34,7 +34,7 @@ public class HalfHourSchedule
             return IntervalState.Inactive;
         }
 
-        if(Intervals.TryGetValue(intervalIndex, out IntervalState state))
+        if(Intervals.TryGetValue(intervalIndex, out var state))
         {
             return state;
         }
@@ -48,13 +48,13 @@ public class HalfHourSchedule
 
     public IntervalState GetStateAt(DateTime time)
     {
-        int index = GetIntervalIndex(time);
+        var index = GetIntervalIndex(time);
         return GetState(index);
     }
 
     private static int GetIntervalIndex(DateTime time)
     {
-        int totalMinutes = time.Hour * 60 + time.Minute;
+        var totalMinutes = time.Hour * 60 + time.Minute;
         return totalMinutes / 30;
     }
 

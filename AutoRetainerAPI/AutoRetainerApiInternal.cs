@@ -1,85 +1,84 @@
 ﻿using ECommons;
 
-namespace AutoRetainerAPI
+namespace AutoRetainerAPI;
+
+public partial class AutoRetainerApi
 {
-    public partial class AutoRetainerApi
+    private void OnRetainerListTaskButtonsDrawAction()
     {
-        private void OnRetainerListTaskButtonsDrawAction()
+        if(OnRetainerListTaskButtonsDraw != null)
         {
-            if (OnRetainerListTaskButtonsDraw != null)
+            GenericHelpers.Safe(() => OnRetainerListTaskButtonsDraw());
+        }
+    }
+
+    private void OnMainControlsDrawAction()
+    {
+        if(OnMainControlsDraw != null)
+        {
+            GenericHelpers.Safe(() => OnMainControlsDraw());
+        }
+    }
+
+    private void OnRetainerPostVentureTaskDrawAction(ulong cid, string retainer)
+    {
+        if(OnRetainerPostVentureTaskDraw != null)
+        {
+            GenericHelpers.Safe(() => OnRetainerPostVentureTaskDraw(cid, retainer));
+        }
+    }
+
+    private void OnRetainerSettingsDrawAction(ulong cid, string retainer)
+    {
+        if(OnRetainerSettingsDraw != null)
+        {
+            GenericHelpers.Safe(() => OnRetainerSettingsDraw(cid, retainer));
+        }
+    }
+
+    private void OnRetainerReadyForPostprocessIntl(string plugin, string retainer)
+    {
+        if(PluginName == plugin)
+        {
+            if(OnRetainerReadyToPostprocess != null)
             {
-                GenericHelpers.Safe(() => OnRetainerListTaskButtonsDraw());
+                GenericHelpers.Safe(() => OnRetainerReadyToPostprocess(retainer));
             }
         }
+    }
 
-        private void OnMainControlsDrawAction()
+    private void OnCharacterReadyForPostprocessIntl(string plugin)
+    {
+        if(PluginName == plugin)
         {
-            if (OnMainControlsDraw != null)
+            if(OnCharacterReadyToPostProcess != null)
             {
-                GenericHelpers.Safe(() => OnMainControlsDraw());
+                GenericHelpers.Safe(() => OnCharacterReadyToPostProcess());
             }
         }
+    }
 
-        private void OnRetainerPostVentureTaskDrawAction(ulong cid, string retainer)
+    private void OnSendRetainerToVentureAction(string n)
+    {
+        if(OnSendRetainerToVenture != null)
         {
-            if (OnRetainerPostVentureTaskDraw != null)
-            {
-                GenericHelpers.Safe(() => OnRetainerPostVentureTaskDraw(cid, retainer));
-            }
+            GenericHelpers.Safe(() => OnSendRetainerToVenture(n));
         }
+    }
 
-        private void OnRetainerSettingsDrawAction(ulong cid, string retainer)
+    private void OnRetainerAdditionalTask(string n)
+    {
+        if(OnRetainerPostprocessStep != null)
         {
-            if (OnRetainerSettingsDraw != null)
-            {
-                GenericHelpers.Safe(() => OnRetainerSettingsDraw(cid, retainer));
-            }
+            GenericHelpers.Safe(() => OnRetainerPostprocessStep(n));
         }
+    }
 
-        private void OnRetainerReadyForPostprocessIntl(string plugin, string retainer)
+    private void OnCharacterAdditionalTask()
+    {
+        if(OnCharacterPostprocessStep != null)
         {
-            if (PluginName == plugin)
-            {
-                if (OnRetainerReadyToPostprocess != null)
-                {
-                    GenericHelpers.Safe(() => OnRetainerReadyToPostprocess(retainer));
-                }
-            }
-        }
-
-        private void OnCharacterReadyForPostprocessIntl(string plugin)
-        {
-            if (PluginName == plugin)
-            {
-                if (OnCharacterReadyToPostProcess != null)
-                {
-                    GenericHelpers.Safe(() => OnCharacterReadyToPostProcess());
-                }
-            }
-        }
-
-        void OnSendRetainerToVentureAction(string n)
-        {
-            if (OnSendRetainerToVenture != null)
-            {
-                GenericHelpers.Safe(() => OnSendRetainerToVenture(n));
-            }
-        }
-
-        void OnRetainerAdditionalTask(string n)
-        {
-            if (OnRetainerPostprocessStep != null)
-            {
-                GenericHelpers.Safe(() => OnRetainerPostprocessStep(n));
-            }
-        }
-
-        void OnCharacterAdditionalTask()
-        {
-            if (OnCharacterPostprocessStep != null)
-            {
-                GenericHelpers.Safe(() => OnCharacterPostprocessStep());
-            }
+            GenericHelpers.Safe(() => OnCharacterPostprocessStep());
         }
     }
 }

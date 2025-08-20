@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AutoRetainerAPI.Configuration;
-public unsafe sealed class ItemWithQuantity
+public sealed unsafe class ItemWithQuantity
 {
     public string ID = Guid.NewGuid().ToString();
     public bool ShouldSerializeID() => false;

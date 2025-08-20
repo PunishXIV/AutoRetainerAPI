@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AutoRetainerAPI.Configuration;
 
-public unsafe sealed class GCExchangeItem
+public sealed unsafe class GCExchangeItem
 {
     public string ID = Guid.NewGuid().ToString();
     public bool ShouldSerializeID() => false;
@@ -27,7 +27,7 @@ public unsafe sealed class GCExchangeItem
         ItemID = itemID % 1_000_000;
         Quantity = quantity;
     }
-    
+
     public RowRef<Item> Data => new(Svc.Data.Excel, ItemID);
     public bool ShouldSerializeData() => false;
 }

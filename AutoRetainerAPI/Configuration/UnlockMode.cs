@@ -1,12 +1,11 @@
 ﻿using System.Reflection;
 
-namespace AutoRetainerAPI.Configuration
+namespace AutoRetainerAPI.Configuration;
+
+[Obfuscation(Exclude = true, ApplyToMembers = true)]
+public enum UnlockMode
 {
-    [Obfuscation(Exclude = true, ApplyToMembers = true)]
-    public enum UnlockMode
-    {
-        WhileLevelling, 
-        SpamOne, 
-        MultiSelect
-    }
+    WhileLevelling,
+    SpamOne,
+    MultiSelect
 }
