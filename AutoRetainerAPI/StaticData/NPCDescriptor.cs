@@ -1,4 +1,5 @@
-﻿using ECommons.DalamudServices;
+﻿using Dalamud.Game.ClientState.Objects.Types;
+using ECommons.DalamudServices;
 using ECommons.GameHelpers;
 using System;
 using System.Collections.Generic;
@@ -51,11 +52,16 @@ public sealed class NPCDescriptor : IEquatable<NPCDescriptor>
 
     public bool IsWithinInteractRadius()
     {
+        return GetObject() != null;
+    }
+
+    public IGameObject? GetObject()
+    {
         var obj = Svc.Objects.FirstOrDefault(x => x.DataId == this.DataID && x.IsTargetable);
-        if(obj != null)
+        if(obj != null && Player.DistanceTo(obj) < this.InteractRadius)
         {
-            return Player.DistanceTo(obj) < this.InteractRadius;
+            return obj;
         }
-        return false;
+        return null;
     }
 }
