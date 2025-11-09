@@ -10,4 +10,5 @@ public class TeleportOptionsOverride
     public bool? RetainersFC = null;
     public bool? RetainersApartment = null;
     public bool? Deployables = null;
+    public bool? RetainersShared = null;
 }
