@@ -17,6 +17,16 @@ public class SubmarineUnlockPlan
     public bool EnforceDSSSinglePoint = false;
     public bool EnforcePlan = false;
 
+    public bool IsModified()
+    {
+        var newPlan = new SubmarineUnlockPlan();
+        return ExcludedRoutes.Count > 0
+            || Delete != newPlan.Delete
+            || Delete != newPlan.UnlockSubs
+            || Delete != newPlan.EnforceDSSSinglePoint
+            || Delete != newPlan.EnforcePlan;
+    }
+
     public bool ShouldSerializeDelete() => false;
 
     public void CopyFrom(SubmarineUnlockPlan other)
@@ -24,6 +34,7 @@ public class SubmarineUnlockPlan
         Name = other.Name;
         ExcludedRoutes = other.ExcludedRoutes.JSONClone();
         UnlockSubs = other.UnlockSubs;
+        EnforceDSSSinglePoint = other.EnforceDSSSinglePoint;
     }
 
     public override string ToString()

@@ -14,6 +14,11 @@ public class SubmarinePointPlan
     public List<uint> Points = [];
     public bool Delete = false;
 
+    public bool IsModified()
+    {
+        return Points.Count > 0;
+    }
+
     public bool ShouldSerializeDelete() => false;
 
     public void CopyFrom(SubmarinePointPlan other)

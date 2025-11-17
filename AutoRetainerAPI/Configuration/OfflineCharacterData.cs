@@ -55,6 +55,9 @@ public class OfflineCharacterData
     public Guid ExchangePlan = Guid.Empty;
     public Guid InventoryCleanupPlan = Guid.Empty;
 
+    public Dictionary<long, uint> SentVenturesByDay = [];
+    public Dictionary<long, uint> SentVoyagesByDay = [];
+
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;
 
