@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AutoRetainer.StaticData;
+#pragma warning disable CS0618
+#pragma warning disable CS8632
 public sealed class NPCDescriptor : IEquatable<NPCDescriptor>
 {
     public uint DataID;
