@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoRetainer.StaticData;
+namespace AutoRetainerAPI.StaticData;
 #pragma warning disable CS0618
 #pragma warning disable CS8632
 public sealed class NPCDescriptor : IEquatable<NPCDescriptor>

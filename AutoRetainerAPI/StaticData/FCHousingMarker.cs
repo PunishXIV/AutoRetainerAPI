@@ -1,4 +1,4 @@
-﻿namespace AutoRetainer.StaticData;
+﻿namespace AutoRetainerAPI.StaticData;
 /// <summary>
 /// This enum contains markers of free company property owned by it
 /// </summary>

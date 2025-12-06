@@ -1,4 +1,4 @@
-﻿namespace AutoRetainer.StaticData;
+﻿namespace AutoRetainerAPI.StaticData;
 public enum SharedHousingMarker
 {
     SmallYellow = 60783,

@@ -1,4 +1,4 @@
-﻿namespace AutoRetainer.StaticData;
+﻿namespace AutoRetainerAPI.StaticData;
 /// <summary>
 /// This enum contains markers of private property owned by you
 /// </summary>

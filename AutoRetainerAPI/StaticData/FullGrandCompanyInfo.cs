@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoRetainer.StaticData;
+namespace AutoRetainerAPI.StaticData;
 public sealed class FullGrandCompanyInfo
 {
     private static readonly float StandardInteractionRadius = 7f;
