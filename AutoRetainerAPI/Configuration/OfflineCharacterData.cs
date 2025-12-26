@@ -58,6 +58,8 @@ public class OfflineCharacterData
     public Dictionary<long, uint> SentVenturesByDay = [];
     public Dictionary<long, uint> SentVoyagesByDay = [];
 
+    public bool AutoFuelPurchase = false;
+
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;
 
