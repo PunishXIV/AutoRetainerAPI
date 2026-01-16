@@ -2,12 +2,14 @@
 using ECommons.DalamudServices;
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using static AutoRetainerAPI.Delegates;
 
 namespace AutoRetainerAPI;
 
 public partial class AutoRetainerApi : IDisposable
 {
+    public readonly AutoRetainerConfig Config = new();
     /// <summary>
     /// Event which is fired when a retainer is about to be sent to a venture.
     /// </summary>
