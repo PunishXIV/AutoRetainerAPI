@@ -14,4 +14,5 @@ public class FCData
     public long FCPoints;
     public long FCPointsLastUpdate;
     public ulong HolderChara;
+    public int Rank;
 }
