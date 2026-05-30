@@ -13,6 +13,7 @@
         <Nullable>disable</Nullable>
         <NoWarn>CS1591</NoWarn>
         <AssemblyVersion>1.0.0.4</AssemblyVersion>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">
