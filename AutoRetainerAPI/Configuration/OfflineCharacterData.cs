@@ -54,11 +54,10 @@ public class OfflineCharacterData
     public bool NoGilTrack = false;
     public Guid ExchangePlan = Guid.Empty;
     public Guid InventoryCleanupPlan = Guid.Empty;
-
     public Dictionary<long, uint> SentVenturesByDay = [];
     public Dictionary<long, uint> SentVoyagesByDay = [];
-
     public bool AutoFuelPurchase = false;
+    public List<uint> StoredCabinetItems = [];
 
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;

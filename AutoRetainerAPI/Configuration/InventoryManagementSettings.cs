@@ -31,6 +31,7 @@ public sealed unsafe class InventoryManagementSettings
     public bool IMEnableItemDesynthesisFromArmory = false;
     public bool IMEnableNpcSell = false;
     public bool AllowSellFromArmory = false;
+    public bool EnableCabinetAutoDelivery = false;
 
     public bool AdditionModeProtectList = true;
     public bool AdditionModeSoftSellList = false;
