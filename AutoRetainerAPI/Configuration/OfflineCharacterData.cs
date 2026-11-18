@@ -60,6 +60,7 @@ public class OfflineCharacterData
     public List<uint> StoredCabinetItems = [];
     public bool NoFcBuffUse = false;
     public bool NoItemBuffUse = false;
+    public bool DisallowedFromBuffPurchase = false;
 
     public string Identity => $"{CID}";
     public bool ShouldSerializeIdentity() => false;

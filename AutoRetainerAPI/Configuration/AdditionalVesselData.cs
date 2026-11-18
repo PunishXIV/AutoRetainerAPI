@@ -20,5 +20,5 @@ public class AdditionalVesselData
     public string SelectedPointPlan = Guid.Empty.ToString();
     public byte[] Points = new byte[5];
 
-    public int IndexOverride = 0;
+    [Obsolete("", true)] public int IndexOverride = 0;
 }

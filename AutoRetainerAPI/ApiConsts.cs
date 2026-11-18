@@ -4,7 +4,7 @@ namespace AutoRetainerAPI;
 
 [Obfuscation(Exclude = true, ApplyToMembers = true)]
 public static class ApiConsts
-{
+{ 
     public const string OnSendRetainerToVenture = "AutoRetainer.OnSendRetainerToVenture";
     public const string OnRetainerAdditionalTask = "AutoRetainer.OnRetainerAdditionalTask";
     public const string OnRetainerReadyForPostprocess = "AutoRetainer.OnRetainerReadyForPostprocess";
